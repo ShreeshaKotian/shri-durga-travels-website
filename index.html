@@ -14,9 +14,8 @@
   <h1 class="text-xl font-bold">Shri Durga Travels</h1>
   <div>
     <a href="#home" class="px-3">Home</a>
-    <a href="#services" class="px-3">Services</a>
-    <a href="#packages" class="px-3">Packages</a>
-    <a href="#reviews" class="px-3">Reviews</a>
+    <a href="#fleet" class="px-3">Fleet</a>
+    <a href="#booking" class="px-3">Booking</a>
     <a href="#contact" class="px-3">Contact</a>
   </div>
 </nav>
@@ -24,90 +23,68 @@
 <!-- Hero -->
 <section id="home" class="text-center p-16 bg-cover bg-center text-white"
 style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
-  <h2 class="text-4xl font-bold mb-4">Explore the World with Us</h2>
-  <p class="mb-6 text-lg">Affordable Tours | Trusted Service | Best Experience</p>
-  <a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
-     target="_blank"
+  <h2 class="text-4xl font-bold mb-4">Reliable Travel Services in Udupi</h2>
+  <p class="mb-6 text-lg">Comfort • Safety • Affordable Pricing</p>
+  <a href="#booking"
      class="bg-green-500 px-6 py-3 rounded-lg text-lg shadow-lg">
-     Book on WhatsApp
+     Book Your Ride
   </a>
 </section>
 
-<!-- Services -->
-<section id="services" class="p-10">
-  <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
-  <div class="grid md:grid-cols-3 gap-6">
-    <div class="bg-white p-5 rounded shadow hover:scale-105">
-      <h3 class="font-bold text-lg">Tour Packages</h3>
-      <p>Domestic & International tours</p>
-    </div>
-    <div class="bg-white p-5 rounded shadow hover:scale-105">
-      <h3 class="font-bold text-lg">Hotel Booking</h3>
-      <p>Budget & luxury stays</p>
-    </div>
-    <div class="bg-white p-5 rounded shadow hover:scale-105">
-      <h3 class="font-bold text-lg">Transport</h3>
-      <p>Bus, car & flight bookings</p>
-    </div>
-  </div>
-</section>
-
-<!-- Packages -->
-<section id="packages" class="p-10 bg-white">
-  <h2 class="text-2xl font-bold text-center mb-6">Popular Packages</h2>
+<!-- Fleet -->
+<section id="fleet" class="p-10 bg-white">
+  <h2 class="text-2xl font-bold text-center mb-6">Our Travel Fleet</h2>
 
   <div class="grid md:grid-cols-3 gap-6">
 
-    <div class="shadow rounded overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3">
+    <div class="shadow rounded overflow-hidden text-center">
+      <img src="https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2">
       <div class="p-4">
-        <h3 class="font-bold">Goa Trip</h3>
-        <p>3 Days / 2 Nights</p>
+        <h3 class="font-bold text-lg">Innova</h3>
+        <p>Comfortable family trips</p>
       </div>
     </div>
 
-    <div class="shadow rounded overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944">
+    <div class="shadow rounded overflow-hidden text-center">
+      <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
       <div class="p-4">
-        <h3 class="font-bold">Kerala Tour</h3>
-        <p>5 Days / 4 Nights</p>
+        <h3 class="font-bold text-lg">Swift Dzire</h3>
+        <p>Budget-friendly rides</p>
       </div>
     </div>
 
-    <div class="shadow rounded overflow-hidden">
-      <img src="https://images.unsplash.com/photo-1549887534-4b5c36c6b2f9">
+    <div class="shadow rounded overflow-hidden text-center">
+      <img src="https://images.unsplash.com/photo-1593941707882-a5bac6861d75">
       <div class="p-4">
-        <h3 class="font-bold">Manali</h3>
-        <p>6 Days / 5 Nights</p>
+        <h3 class="font-bold text-lg">Tempo Traveller</h3>
+        <p>Perfect for group travel</p>
       </div>
     </div>
 
   </div>
 </section>
 
-<!-- Reviews -->
-<section id="reviews" class="p-10">
-  <h2 class="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
+<!-- Booking Form -->
+<section id="booking" class="p-10">
+  <h2 class="text-2xl font-bold text-center mb-6">Book Your Ride</h2>
 
-  <div class="grid md:grid-cols-3 gap-6 text-center">
+  <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
 
-    <div class="bg-white p-5 shadow rounded">
-      ⭐⭐⭐⭐⭐  
-      <p>"Amazing service! Very comfortable trip."</p>
-      <h4 class="font-bold mt-2">– Rahul</h4>
-    </div>
+    <input id="name" type="text" placeholder="Your Name" class="w-full mb-3 p-2 border rounded">
+    <input id="phone" type="text" placeholder="Phone Number" class="w-full mb-3 p-2 border rounded">
+    <input id="pickup" type="text" placeholder="Pickup Location" class="w-full mb-3 p-2 border rounded">
+    <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
-    <div class="bg-white p-5 shadow rounded">
-      ⭐⭐⭐⭐⭐  
-      <p>"Best travel agency in Udupi!"</p>
-      <h4 class="font-bold mt-2">– Sneha</h4>
-    </div>
+    <select id="vehicle" class="w-full mb-3 p-2 border rounded">
+      <option>Innova</option>
+      <option>Swift Dzire</option>
+      <option>Tempo Traveller</option>
+    </select>
 
-    <div class="bg-white p-5 shadow rounded">
-      ⭐⭐⭐⭐⭐  
-      <p>"Affordable and reliable."</p>
-      <h4 class="font-bold mt-2">– Kiran</h4>
-    </div>
+    <button onclick="sendToWhatsApp()" 
+      class="w-full bg-green-500 text-white p-3 rounded text-lg">
+      Book via WhatsApp
+    </button>
 
   </div>
 </section>
@@ -119,24 +96,36 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   <p>📞 +91 9108842293</p>
   <p class="mb-4">📍 Aadiudupi, Udupi - 576101</p>
 
-  <a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
-     target="_blank"
-     class="bg-green-500 text-white px-6 py-3 rounded text-lg">
-     Chat on WhatsApp
-  </a>
-
-  <!-- Google Map -->
-  <div class="mt-6">
-    <iframe 
-      src="https://maps.google.com/maps?q=udupi&t=&z=13&ie=UTF8&iwloc=&output=embed"
-      class="w-full h-64 rounded"></iframe>
-  </div>
+  <iframe 
+    src="https://maps.google.com/maps?q=udupi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    class="w-full h-64 rounded mt-4"></iframe>
 </section>
 
+<!-- WhatsApp Script -->
+<script>
+function sendToWhatsApp() {
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let pickup = document.getElementById("pickup").value;
+  let drop = document.getElementById("drop").value;
+  let vehicle = document.getElementById("vehicle").value;
+
+  let message = `Hello Shri Durga Travels,
+Name: ${name}
+Phone: ${phone}
+Pickup: ${pickup}
+Drop: ${drop}
+Vehicle: ${vehicle}`;
+
+  let url = "https://wa.me/919108842293?text=" + encodeURIComponent(message);
+  window.open(url, "_blank");
+}
+</script>
+
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
+<a href="https://wa.me/919108842293"
    target="_blank"
-   class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-xl hover:scale-110 transition">
+   class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-xl">
    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
 </a>
 
