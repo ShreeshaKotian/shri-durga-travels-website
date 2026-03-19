@@ -20,7 +20,7 @@
   </div>
 </nav>
 
-<!-- Hero with Sea Image -->
+<!-- Hero -->
 <section id="home" class="text-center p-20 text-white bg-cover bg-center"
 style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
   <h2 class="text-4xl font-bold mb-4">Reliable Travel Services in Udupi</h2>
@@ -58,7 +58,7 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   </div>
 </section>
 
-<!-- Booking Form -->
+<!-- Booking -->
 <section id="booking" class="p-10">
   <h2 class="text-2xl font-bold text-center mb-6">Book Your Ride</h2>
 
@@ -70,14 +70,17 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
     <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
     <!-- Trip Type -->
-    <select id="tripType" class="w-full mb-3 p-2 border rounded">
+    <select id="tripType" onchange="toggleReturnDate()" class="w-full mb-3 p-2 border rounded">
       <option>One Way</option>
       <option>Round Trip</option>
     </select>
 
     <!-- Dates -->
     <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
-    <input id="returnDate" type="date" class="w-full mb-3 p-2 border rounded">
+
+    <div id="returnDateContainer" style="display:none;">
+      <input id="returnDate" type="date" class="w-full mb-3 p-2 border rounded">
+    </div>
 
     <!-- Passengers -->
     <input id="adults" type="number" placeholder="No. of Adults" class="w-full mb-3 p-2 border rounded">
@@ -103,15 +106,25 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
 
   <p>📞 +91 9108842293</p>
-  <p class="mb-4">📍 Aadiudupi, Udupi - 576101</p>
+  <p class="mb-4">📍 Adiudupi, Udupi - 576101</p>
 
   <iframe 
     src="https://maps.google.com/maps?q=udupi&t=&z=13&ie=UTF8&iwloc=&output=embed"
     class="w-full h-64 rounded mt-4"></iframe>
 </section>
 
-<!-- WhatsApp Script -->
 <script>
+function toggleReturnDate() {
+  let tripType = document.getElementById("tripType").value;
+  let returnBox = document.getElementById("returnDateContainer");
+
+  if (tripType === "Round Trip") {
+    returnBox.style.display = "block";
+  } else {
+    returnBox.style.display = "none";
+  }
+}
+
 function sendToWhatsApp() {
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
@@ -133,8 +146,13 @@ Pickup: ${pickup}
 Drop: ${drop}
 
 Trip Type: ${tripType}
-Travel Date: ${date}
-Return Date: ${returnDate}
+Travel Date: ${date}`;
+
+  if (tripType === "Round Trip") {
+    message += `\nReturn Date: ${returnDate}`;
+  }
+
+  message += `
 
 Passengers:
 Adults: ${adults}
@@ -158,7 +176,7 @@ Vehicle: ${vehicle}`;
 <footer class="bg-blue-700 text-white text-center p-4 mt-10">
   <p>© 2026 Shri Durga Travels</p>
   <p>Owner: Jagadeesh Kanchan</p>
-  <p>Aadiudupi, Udupi - 576101</p>
+  <p>Adiudupi, Udupi - 576101</p>
 </footer>
 
 </body>
