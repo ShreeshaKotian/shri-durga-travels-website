@@ -19,11 +19,15 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section id="home" class="text-center p-10 bg-white">
-    <h2 class="text-3xl font-bold mb-4">Explore India with Us</h2>
-    <p class="mb-6">Best domestic travel packages at affordable prices</p>
-    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded">Book Now</a>
+  <!-- Hero Section with Banner Image -->
+  <section id="home" class="relative text-center bg-white">
+    <div class="relative h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=500&fit=crop');">
+      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center">
+        <h2 class="text-4xl font-bold mb-4 text-white">Explore India with Us</h2>
+        <p class="mb-6 text-lg text-white">Best domestic travel packages at affordable prices</p>
+        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded text-lg hover:bg-blue-700">Book Now</a>
+      </div>
+    </div>
   </section>
 
   <!-- Services -->
@@ -47,7 +51,7 @@
     <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
       <!-- Innova -->
       <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1533473359331-35acde7260c9?w=400&h=300&fit=crop" alt="Innova" class="w-full h-48 object-cover rounded mb-3">
+        <img src="https://images.unsplash.com/photo-1605559424843-9e4c3ca4628d?w=400&h=300&fit=crop" alt="Innova" class="w-full h-48 object-cover rounded mb-3">
         <h3 class="font-bold text-lg">Innova</h3>
         <p class="text-sm text-gray-600">6-7 Seater SUV</p>
         <p class="text-sm text-gray-600">Perfect for family trips</p>
@@ -55,7 +59,7 @@
 
       <!-- Swift Desire -->
       <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop" alt="Swift Desire" class="w-full h-48 object-cover rounded mb-3">
+        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=400&h=300&fit=crop" alt="Swift Desire" class="w-full h-48 object-cover rounded mb-3">
         <h3 class="font-bold text-lg">Swift Desire</h3>
         <p class="text-sm text-gray-600">4-5 Seater Sedan</p>
         <p class="text-sm text-gray-600">Comfort & efficiency</p>
@@ -63,7 +67,7 @@
 
       <!-- Tempo Traveller -->
       <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=400&h=300&fit=crop" alt="Tempo Traveller" class="w-full h-48 object-cover rounded mb-3">
+        <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400&h=300&fit=crop" alt="Tempo Traveller" class="w-full h-48 object-cover rounded mb-3">
         <h3 class="font-bold text-lg">Tempo Traveller</h3>
         <p class="text-sm text-gray-600">12-16 Seater</p>
         <p class="text-sm text-gray-600">Group tours & events</p>
@@ -71,7 +75,7 @@
 
       <!-- Force Urbania -->
       <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1464219414925-af4c86a9db7a?w=400&h=300&fit=crop" alt="Force Urbania" class="w-full h-48 object-cover rounded mb-3">
+        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop" alt="Force Urbania" class="w-full h-48 object-cover rounded mb-3">
         <h3 class="font-bold text-lg">Force Urbania</h3>
         <p class="text-sm text-gray-600">9-12 Seater</p>
         <p class="text-sm text-gray-600">Spacious & comfortable</p>
@@ -86,14 +90,14 @@
 
     <!-- WhatsApp Button -->
     <a href="https://wa.me/919108842293" target="_blank" 
-       class="bg-green-500 text-white px-6 py-3 rounded text-lg">
+       class="bg-green-500 text-white px-6 py-3 rounded text-lg hover:bg-green-600">
        Chat on WhatsApp
     </a>
   </section>
 
   <!-- Floating WhatsApp Icon -->
   <a href="https://wa.me/919108842293" target="_blank"
-     class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg">
+     class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600">
      <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
   </a>
 
