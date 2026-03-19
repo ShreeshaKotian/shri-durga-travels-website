@@ -1,112 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shri Durga Travels</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Hero section style */
+        .hero {
+            background: linear-gradient(to right, rgba(255, 182, 193, 0.8), rgba(255, 105, 180, 0.8));
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+    <title>Shri Durga Travels</title>
 </head>
-<body class="bg-gray-100 font-sans">
-
-  <!-- Navbar -->
-  <nav class="bg-blue-600 p-4 text-white flex justify-between">
-    <h1 class="text-xl font-bold">Shri Durga Travels</h1>
-    <div>
-      <a href="#home" class="px-3">Home</a>
-      <a href="#services" class="px-3">Services</a>
-      <a href="#vehicles" class="px-3">Vehicles</a>
-      <a href="#contact" class="px-3">Contact</a>
+<body>
+    <div class="hero">
+        <h1>Travel the World with Us!</h1>
+        <p>Your journey begins here. "Traveling – it leaves you speechless, then turns you into a storyteller." – Ibn Battuta</p>
     </div>
-  </nav>
-
-  <!-- Hero Section with Banner Image -->
-  <section id="home" class="relative text-center bg-white">
-    <div class="relative h-96 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1200&h=500&fit=crop');">
-      <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center">
-        <h2 class="text-4xl font-bold mb-4 text-white">Explore India with Us</h2>
-        <p class="mb-6 text-lg text-white">Best domestic travel packages at affordable prices</p>
-        <a href="#contact" class="bg-blue-600 text-white px-6 py-3 rounded text-lg hover:bg-blue-700">Book Now</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="p-10">
-    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-white p-5 rounded shadow">
-        <h3 class="font-bold text-lg">Domestic Tour Packages</h3>
-        <p>Explore beautiful destinations across India with customized tour packages</p>
-      </div>
-      <div class="bg-white p-5 rounded shadow">
-        <h3 class="font-bold text-lg">Transport Services</h3>
-        <p>Comfortable and reliable transportation for your domestic journeys</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Vehicles Section -->
-  <section id="vehicles" class="p-10 bg-white">
-    <h2 class="text-2xl font-bold text-center mb-6">Our Fleet</h2>
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
-      <!-- Innova -->
-      <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1605559424843-9e4c3ca4628d?w=400&h=300&fit=crop" alt="Innova" class="w-full h-48 object-cover rounded mb-3">
-        <h3 class="font-bold text-lg">Innova</h3>
-        <p class="text-sm text-gray-600">6-7 Seater SUV</p>
-        <p class="text-sm text-gray-600">Perfect for family trips</p>
-      </div>
-
-      <!-- Swift Desire -->
-      <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1614162692292-7ac56d7f7f1e?w=400&h=300&fit=crop" alt="Swift Desire" class="w-full h-48 object-cover rounded mb-3">
-        <h3 class="font-bold text-lg">Swift Desire</h3>
-        <p class="text-sm text-gray-600">4-5 Seater Sedan</p>
-        <p class="text-sm text-gray-600">Comfort & efficiency</p>
-      </div>
-
-      <!-- Tempo Traveller -->
-      <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1527786356703-4b100091cd2c?w=400&h=300&fit=crop" alt="Tempo Traveller" class="w-full h-48 object-cover rounded mb-3">
-        <h3 class="font-bold text-lg">Tempo Traveller</h3>
-        <p class="text-sm text-gray-600">12-16 Seater</p>
-        <p class="text-sm text-gray-600">Group tours & events</p>
-      </div>
-
-      <!-- Force Urbania -->
-      <div class="bg-gray-50 p-5 rounded shadow text-center">
-        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=300&fit=crop" alt="Force Urbania" class="w-full h-48 object-cover rounded mb-3">
-        <h3 class="font-bold text-lg">Force Urbania</h3>
-        <p class="text-sm text-gray-600">9-12 Seater</p>
-        <p class="text-sm text-gray-600">Spacious & comfortable</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="p-10 bg-white text-center">
-    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-    <p class="mb-4">Click below to chat directly on WhatsApp</p>
-
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919108842293" target="_blank" 
-       class="bg-green-500 text-white px-6 py-3 rounded text-lg hover:bg-green-600">
-       Chat on WhatsApp
-    </a>
-  </section>
-
-  <!-- Floating WhatsApp Icon -->
-  <a href="https://wa.me/919108842293" target="_blank"
-     class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg hover:bg-green-600">
-     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
-  </a>
-
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center p-4 mt-10">
-    <p>© 2026 Shri Durga Travels. All rights reserved.</p>
-    <p class="mt-2">Owner: Jagadeesh Kanchan </p>
-    <p>Address: Adiudupi, Udupi Dist. 576101 </p>
-  </footer>
-
+    
+    <h2>Booking Form</h2>
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="Your email" required>
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+    
+    <h2>Our Fleet</h2>
+    <ul>
+        <li>
+            <h3>Toyota Innova</h3>
+            <img src="path/to/toyota-innova.jpg" alt="Toyota Innova">
+        </li>
+        <li>
+            <h3>Suzuki Swift Dzire</h3>
+            <img src="path/to/suzuki-swift-dzire.jpg" alt="Suzuki Swift Dzire">
+        </li>
+        <li>
+            <h3>Force Tempo Traveller</h3>
+            <img src="path/to/force-tempo-traveller.jpg" alt="Force Tempo Traveller">
+        </li>
+        <li>
+            <h3>Force Urbania</h3>
+            <img src="path/to/force-urbania.jpg" alt="Force Urbania">
+        </li>
+    </ul>
 </body>
 </html>
