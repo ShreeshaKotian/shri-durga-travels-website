@@ -69,22 +69,27 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
     <input id="pickup" type="text" placeholder="Pickup Location" class="w-full mb-3 p-2 border rounded">
     <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
+    <!-- Trip Type -->
     <select id="tripType" onchange="toggleReturnDate()" class="w-full mb-3 p-2 border rounded">
       <option>One Way</option>
       <option>Round Trip</option>
     </select>
 
+    <!-- Dates -->
     <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
 
     <div id="returnDateContainer" style="display:none;">
       <input id="returnDate" type="date" class="w-full mb-3 p-2 border rounded">
     </div>
 
+    <!-- Passengers -->
     <input id="adults" type="number" placeholder="No. of Adults" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
     <input id="children" type="number" placeholder="No. of Children" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
 
+    <!-- Suggestion -->
     <p id="vehicleSuggestion" class="text-blue-600 font-semibold mb-3"></p>
 
+    <!-- Vehicle -->
     <select id="vehicle" class="w-full mb-3 p-2 border rounded">
       <option>Swift Dzire / Toyota Etios</option>
       <option>Toyota Innova / Chevrolet Tavera</option>
@@ -104,7 +109,7 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
 
   <p>📞 +91 9945924579</p>
-  <p class="mb-4">📍 Adiudupi, Udupi - 576101</p>
+  <p class="mb-4">📍 Karavali Bypass NH-66, 576101</p>
 
   <iframe 
     src="https://maps.google.com/maps?q=udupi&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -188,7 +193,7 @@ Vehicle: ${vehicle}`;
 <footer class="bg-blue-700 text-white text-center p-4 mt-10">
   <p>© 2026 Sri Durga Travels</p>
   <p>Owner: Jagadeesh Kanchan</p>
-  <p>Adiudupi, Udupi - 576101</p>
+  <p>Karavali Bypass NH-66, 576101</p>
 </footer>
 
 </body>
