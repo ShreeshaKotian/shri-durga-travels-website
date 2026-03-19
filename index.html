@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shri Durga Travels</title>
+  <title>Sri Durga Travels</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -11,7 +11,7 @@
 
 <!-- Navbar -->
 <nav class="bg-blue-700 p-4 text-white flex justify-between sticky top-0">
-  <h1 class="text-xl font-bold">Shri Durga Travels</h1>
+  <h1 class="text-xl font-bold">Sri Durga Travels</h1>
   <div>
     <a href="#home" class="px-3">Home</a>
     <a href="#fleet" class="px-3">Fleet</a>
@@ -38,15 +38,15 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   <div class="grid md:grid-cols-3 gap-6 text-center">
 
     <div class="bg-gray-100 p-5 rounded shadow">
-      <h3 class="font-bold text-lg">Toyota Innova</h3>
-      <p>Seating Capacity: 6–7 People</p>
-      <p class="text-sm text-gray-600">Best for family trips</p>
+      <h3 class="font-bold text-lg">Swift Dzire / Toyota Etios</h3>
+      <p>Seating Capacity: 4 People</p>
+      <p class="text-sm text-gray-600">Budget-friendly rides</p>
     </div>
 
     <div class="bg-gray-100 p-5 rounded shadow">
-      <h3 class="font-bold text-lg">Swift Dzire</h3>
-      <p>Seating Capacity: 4 People</p>
-      <p class="text-sm text-gray-600">Budget-friendly rides</p>
+      <h3 class="font-bold text-lg">Toyota Innova / Chevrolet Tavera</h3>
+      <p>Seating Capacity: 6–7 People</p>
+      <p class="text-sm text-gray-600">Best for family trips</p>
     </div>
 
     <div class="bg-gray-100 p-5 rounded shadow">
@@ -69,30 +69,25 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
     <input id="pickup" type="text" placeholder="Pickup Location" class="w-full mb-3 p-2 border rounded">
     <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
-    <!-- Trip Type -->
     <select id="tripType" onchange="toggleReturnDate()" class="w-full mb-3 p-2 border rounded">
       <option>One Way</option>
       <option>Round Trip</option>
     </select>
 
-    <!-- Dates -->
     <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
 
     <div id="returnDateContainer" style="display:none;">
       <input id="returnDate" type="date" class="w-full mb-3 p-2 border rounded">
     </div>
 
-    <!-- Passengers -->
     <input id="adults" type="number" placeholder="No. of Adults" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
     <input id="children" type="number" placeholder="No. of Children" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
 
-    <!-- Suggestion -->
     <p id="vehicleSuggestion" class="text-blue-600 font-semibold mb-3"></p>
 
-    <!-- Vehicle -->
     <select id="vehicle" class="w-full mb-3 p-2 border rounded">
-      <option>Swift Dzire</option>
-      <option>Toyota Innova</option>
+      <option>Swift Dzire / Toyota Etios</option>
+      <option>Toyota Innova / Chevrolet Tavera</option>
       <option>Tempo Traveller</option>
     </select>
 
@@ -108,7 +103,7 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
 <section id="contact" class="p-10 bg-white text-center">
   <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
 
-  <p>📞 +91 9108842293</p>
+  <p>📞 +91 9945924579</p>
   <p class="mb-4">📍 Adiudupi, Udupi - 576101</p>
 
   <iframe 
@@ -117,23 +112,20 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
 </section>
 
 <script>
-// Show/hide return date
 function toggleReturnDate() {
   let tripType = document.getElementById("tripType").value;
-  let returnBox = document.getElementById("returnDateContainer");
-
-  returnBox.style.display = (tripType === "Round Trip") ? "block" : "none";
+  document.getElementById("returnDateContainer").style.display =
+    (tripType === "Round Trip") ? "block" : "none";
 }
 
-// Auto vehicle selection
 function autoSelectVehicle() {
   let adults = parseInt(document.getElementById("adults").value) || 0;
   let children = parseInt(document.getElementById("children").value) || 0;
   let total = adults + children;
 
   let vehicle = "";
-  if (total <= 4 && total > 0) vehicle = "Swift Dzire";
-  else if (total <= 7) vehicle = "Toyota Innova";
+  if (total <= 4 && total > 0) vehicle = "Swift Dzire / Toyota Etios";
+  else if (total <= 7) vehicle = "Toyota Innova / Chevrolet Tavera";
   else if (total > 7) vehicle = "Tempo Traveller";
 
   if (vehicle !== "") {
@@ -145,7 +137,6 @@ function autoSelectVehicle() {
   }
 }
 
-// WhatsApp message
 function sendToWhatsApp() {
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
@@ -158,7 +149,7 @@ function sendToWhatsApp() {
   let children = document.getElementById("children").value;
   let vehicle = document.getElementById("vehicle").value;
 
-  let message = `Hello Shri Durga Travels,
+  let message = `Hello Sri Durga Travels,
 
 Booking Details:
 Name: ${name}
@@ -181,13 +172,13 @@ Children: ${children}
 
 Vehicle: ${vehicle}`;
 
-  let url = "https://wa.me/919108842293?text=" + encodeURIComponent(message);
+  let url = "https://wa.me/919945924579?text=" + encodeURIComponent(message);
   window.open(url, "_blank");
 }
 </script>
 
 <!-- Floating WhatsApp -->
-<a href="https://wa.me/919108842293"
+<a href="https://wa.me/919945924579"
    target="_blank"
    class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-xl">
    <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
@@ -195,7 +186,7 @@ Vehicle: ${vehicle}`;
 
 <!-- Footer -->
 <footer class="bg-blue-700 text-white text-center p-4 mt-10">
-  <p>© 2026 Shri Durga Travels</p>
+  <p>© 2026 Sri Durga Travels</p>
   <p>Owner: Jagadeesh Kanchan</p>
   <p>Adiudupi, Udupi - 576101</p>
 </footer>
