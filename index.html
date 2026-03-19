@@ -38,7 +38,7 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
   <div class="grid md:grid-cols-3 gap-6 text-center">
 
     <div class="bg-gray-100 p-5 rounded shadow">
-      <h3 class="font-bold text-lg">Innova</h3>
+      <h3 class="font-bold text-lg">Toyota Innova</h3>
       <p>Seating Capacity: 6–7 People</p>
       <p class="text-sm text-gray-600">Best for family trips</p>
     </div>
@@ -60,7 +60,7 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
 
 <!-- Booking -->
 <section id="booking" class="p-10">
-  <h2 class="text-2xl font-bold text-center mb-6">Book Your Ride</h2>
+  <h2 class="text-2xl font-bold text-center mb-6">Smart Booking System</h2>
 
   <div class="max-w-lg mx-auto bg-white p-6 rounded shadow">
 
@@ -83,13 +83,16 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
     </div>
 
     <!-- Passengers -->
-    <input id="adults" type="number" placeholder="No. of Adults" class="w-full mb-3 p-2 border rounded">
-    <input id="children" type="number" placeholder="No. of Children" class="w-full mb-3 p-2 border rounded">
+    <input id="adults" type="number" placeholder="No. of Adults" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
+    <input id="children" type="number" placeholder="No. of Children" oninput="autoSelectVehicle()" class="w-full mb-3 p-2 border rounded">
+
+    <!-- Suggestion -->
+    <p id="vehicleSuggestion" class="text-blue-600 font-semibold mb-3"></p>
 
     <!-- Vehicle -->
     <select id="vehicle" class="w-full mb-3 p-2 border rounded">
-      <option>Innova</option>
       <option>Swift Dzire</option>
+      <option>Toyota Innova</option>
       <option>Tempo Traveller</option>
     </select>
 
@@ -114,17 +117,35 @@ style="background-image:url('https://images.unsplash.com/photo-1507525428034-b72
 </section>
 
 <script>
+// Show/hide return date
 function toggleReturnDate() {
   let tripType = document.getElementById("tripType").value;
   let returnBox = document.getElementById("returnDateContainer");
 
-  if (tripType === "Round Trip") {
-    returnBox.style.display = "block";
+  returnBox.style.display = (tripType === "Round Trip") ? "block" : "none";
+}
+
+// Auto vehicle selection
+function autoSelectVehicle() {
+  let adults = parseInt(document.getElementById("adults").value) || 0;
+  let children = parseInt(document.getElementById("children").value) || 0;
+  let total = adults + children;
+
+  let vehicle = "";
+  if (total <= 4 && total > 0) vehicle = "Swift Dzire";
+  else if (total <= 7) vehicle = "Toyota Innova";
+  else if (total > 7) vehicle = "Tempo Traveller";
+
+  if (vehicle !== "") {
+    document.getElementById("vehicle").value = vehicle;
+    document.getElementById("vehicleSuggestion").innerText =
+      "Recommended Vehicle: " + vehicle;
   } else {
-    returnBox.style.display = "none";
+    document.getElementById("vehicleSuggestion").innerText = "";
   }
 }
 
+// WhatsApp message
 function sendToWhatsApp() {
   let name = document.getElementById("name").value;
   let phone = document.getElementById("phone").value;
