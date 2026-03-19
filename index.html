@@ -30,7 +30,7 @@
   </a>
 </section>
 
-<!-- Fleet (No Images, Only Details) -->
+<!-- Fleet -->
 <section id="fleet" class="p-10 bg-white">
   <h2 class="text-2xl font-bold text-center mb-6">Our Travel Fleet</h2>
 
@@ -68,10 +68,14 @@
     <input id="pickup" type="text" placeholder="Pickup Location" class="w-full mb-3 p-2 border rounded">
     <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
-    <!-- NEW: Travellers -->
+    <!-- NEW: Trip Date -->
+    <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
+
+    <!-- Travellers -->
     <input id="adults" type="number" placeholder="No. of Adults" class="w-full mb-3 p-2 border rounded">
     <input id="children" type="number" placeholder="No. of Children" class="w-full mb-3 p-2 border rounded">
 
+    <!-- Vehicle -->
     <select id="vehicle" class="w-full mb-3 p-2 border rounded">
       <option>Innova</option>
       <option>Swift Dzire</option>
@@ -105,17 +109,24 @@ function sendToWhatsApp() {
   let phone = document.getElementById("phone").value;
   let pickup = document.getElementById("pickup").value;
   let drop = document.getElementById("drop").value;
+  let date = document.getElementById("date").value;
   let adults = document.getElementById("adults").value;
   let children = document.getElementById("children").value;
   let vehicle = document.getElementById("vehicle").value;
 
   let message = `Hello Shri Durga Travels,
+
+Booking Details:
 Name: ${name}
 Phone: ${phone}
 Pickup: ${pickup}
 Drop: ${drop}
+Date: ${date}
+
+Travellers:
 Adults: ${adults}
 Children: ${children}
+
 Vehicle: ${vehicle}`;
 
   let url = "https://wa.me/919108842293?text=" + encodeURIComponent(message);
