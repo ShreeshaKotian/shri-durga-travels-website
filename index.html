@@ -6,68 +6,146 @@
   <title>Shri Durga Travels</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
+
 <body class="bg-gray-100 font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-blue-600 p-4 text-white flex justify-between">
-    <h1 class="text-xl font-bold">Shri Durga Travels</h1>
-    <div>
-      <a href="#home" class="px-3">Home</a>
-      <a href="#services" class="px-3">Services</a>
-      <a href="#contact" class="px-3">Contact</a>
+<!-- Navbar -->
+<nav class="bg-blue-700 p-4 text-white flex justify-between sticky top-0">
+  <h1 class="text-xl font-bold">Shri Durga Travels</h1>
+  <div>
+    <a href="#home" class="px-3">Home</a>
+    <a href="#services" class="px-3">Services</a>
+    <a href="#packages" class="px-3">Packages</a>
+    <a href="#reviews" class="px-3">Reviews</a>
+    <a href="#contact" class="px-3">Contact</a>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section id="home" class="text-center p-16 bg-cover bg-center text-white"
+style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
+  <h2 class="text-4xl font-bold mb-4">Explore the World with Us</h2>
+  <p class="mb-6 text-lg">Affordable Tours | Trusted Service | Best Experience</p>
+  <a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
+     target="_blank"
+     class="bg-green-500 px-6 py-3 rounded-lg text-lg shadow-lg">
+     Book on WhatsApp
+  </a>
+</section>
+
+<!-- Services -->
+<section id="services" class="p-10">
+  <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
+  <div class="grid md:grid-cols-3 gap-6">
+    <div class="bg-white p-5 rounded shadow hover:scale-105">
+      <h3 class="font-bold text-lg">Tour Packages</h3>
+      <p>Domestic & International tours</p>
     </div>
-  </nav>
+    <div class="bg-white p-5 rounded shadow hover:scale-105">
+      <h3 class="font-bold text-lg">Hotel Booking</h3>
+      <p>Budget & luxury stays</p>
+    </div>
+    <div class="bg-white p-5 rounded shadow hover:scale-105">
+      <h3 class="font-bold text-lg">Transport</h3>
+      <p>Bus, car & flight bookings</p>
+    </div>
+  </div>
+</section>
 
-  <!-- Hero Section -->
-  <section id="home" class="text-center p-10 bg-white">
-    <h2 class="text-3xl font-bold mb-4">Explore the World with Us</h2>
-    <p class="mb-6">Best travel packages at affordable prices</p>
-    <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded">Book Now</a>
-  </section>
+<!-- Packages -->
+<section id="packages" class="p-10 bg-white">
+  <h2 class="text-2xl font-bold text-center mb-6">Popular Packages</h2>
 
-  <!-- Services -->
-  <section id="services" class="p-10">
-    <h2 class="text-2xl font-bold text-center mb-6">Our Services</h2>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-white p-5 rounded shadow">
-        <h3 class="font-bold text-lg">Tour Packages</h3>
-        <p>Domestic & International tours</p>
-      </div>
-      <div class="bg-white p-5 rounded shadow">
-        <h3 class="font-bold text-lg">Hotel Booking</h3>
-        <p>Affordable & luxury stays</p>
-      </div>
-      <div class="bg-white p-5 rounded shadow">
-        <h3 class="font-bold text-lg">Transport</h3>
-        <p>Bus, car & flight bookings</p>
+  <div class="grid md:grid-cols-3 gap-6">
+
+    <div class="shadow rounded overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1589308078059-be1415eab4c3">
+      <div class="p-4">
+        <h3 class="font-bold">Goa Trip</h3>
+        <p>3 Days / 2 Nights</p>
       </div>
     </div>
-  </section>
 
-  <!-- Contact -->
-  <section id="contact" class="p-10 bg-white text-center">
-    <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
-    <p class="mb-4">Click below to chat directly on WhatsApp</p>
+    <div class="shadow rounded overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944">
+      <div class="p-4">
+        <h3 class="font-bold">Kerala Tour</h3>
+        <p>5 Days / 4 Nights</p>
+      </div>
+    </div>
 
-    <!-- WhatsApp Button -->
-    <a href="https://wa.me/919108842293" target="_blank" 
-       class="bg-green-500 text-white px-6 py-3 rounded text-lg">
-       Chat on WhatsApp
-    </a>
-  </section>
+    <div class="shadow rounded overflow-hidden">
+      <img src="https://images.unsplash.com/photo-1549887534-4b5c36c6b2f9">
+      <div class="p-4">
+        <h3 class="font-bold">Manali</h3>
+        <p>6 Days / 5 Nights</p>
+      </div>
+    </div>
 
-  <!-- Floating WhatsApp Icon -->
-  <a href="https://wa.me/919108842293" target="_blank"
-     class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-lg">
-     <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
+  </div>
+</section>
+
+<!-- Reviews -->
+<section id="reviews" class="p-10">
+  <h2 class="text-2xl font-bold text-center mb-6">Customer Reviews</h2>
+
+  <div class="grid md:grid-cols-3 gap-6 text-center">
+
+    <div class="bg-white p-5 shadow rounded">
+      ⭐⭐⭐⭐⭐  
+      <p>"Amazing service! Very comfortable trip."</p>
+      <h4 class="font-bold mt-2">– Rahul</h4>
+    </div>
+
+    <div class="bg-white p-5 shadow rounded">
+      ⭐⭐⭐⭐⭐  
+      <p>"Best travel agency in Udupi!"</p>
+      <h4 class="font-bold mt-2">– Sneha</h4>
+    </div>
+
+    <div class="bg-white p-5 shadow rounded">
+      ⭐⭐⭐⭐⭐  
+      <p>"Affordable and reliable."</p>
+      <h4 class="font-bold mt-2">– Kiran</h4>
+    </div>
+
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="p-10 bg-white text-center">
+  <h2 class="text-2xl font-bold mb-4">Contact Us</h2>
+
+  <p>📞 +91 9108842293</p>
+  <p class="mb-4">📍 Aadiudupi, Udupi - 576101</p>
+
+  <a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
+     target="_blank"
+     class="bg-green-500 text-white px-6 py-3 rounded text-lg">
+     Chat on WhatsApp
   </a>
 
-  <!-- Footer -->
-  <footer class="bg-blue-600 text-white text-center p-4 mt-10">
-    <p>© 2026 Shri Durga Travels. All rights reserved.</p>
-    <p class="mt-2">Owner: Jagadeesh Kanchan </p>
-    <p>Address: Aadiudupi, Udupi Dist.576101 </p>
-  </footer>
+  <!-- Google Map -->
+  <div class="mt-6">
+    <iframe 
+      src="https://maps.google.com/maps?q=udupi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      class="w-full h-64 rounded"></iframe>
+  </div>
+</section>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/919108842293?text=Hello%20I%20want%20to%20book%20a%20trip"
+   target="_blank"
+   class="fixed bottom-5 right-5 bg-green-500 p-4 rounded-full shadow-xl hover:scale-110 transition">
+   <img src="https://img.icons8.com/ios-filled/50/ffffff/whatsapp.png" width="30"/>
+</a>
+
+<!-- Footer -->
+<footer class="bg-blue-700 text-white text-center p-4 mt-10">
+  <p>© 2026 Shri Durga Travels</p>
+  <p>Owner: Jagadeesh Kanchan</p>
+  <p>Aadiudupi, Udupi - 576101</p>
+</footer>
 
 </body>
 </html>
