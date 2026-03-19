@@ -20,8 +20,9 @@
   </div>
 </nav>
 
-<!-- Hero -->
-<section id="home" class="text-center p-16 bg-blue-600 text-white">
+<!-- Hero with Sea Image -->
+<section id="home" class="text-center p-20 text-white bg-cover bg-center"
+style="background-image:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e');">
   <h2 class="text-4xl font-bold mb-4">Reliable Travel Services in Udupi</h2>
   <p class="mb-6 text-lg">Comfort • Safety • Affordable Pricing</p>
   <a href="#booking"
@@ -68,10 +69,17 @@
     <input id="pickup" type="text" placeholder="Pickup Location" class="w-full mb-3 p-2 border rounded">
     <input id="drop" type="text" placeholder="Drop Location" class="w-full mb-3 p-2 border rounded">
 
-    <!-- NEW: Trip Date -->
-    <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
+    <!-- Trip Type -->
+    <select id="tripType" class="w-full mb-3 p-2 border rounded">
+      <option>One Way</option>
+      <option>Round Trip</option>
+    </select>
 
-    <!-- Travellers -->
+    <!-- Dates -->
+    <input id="date" type="date" class="w-full mb-3 p-2 border rounded">
+    <input id="returnDate" type="date" class="w-full mb-3 p-2 border rounded">
+
+    <!-- Passengers -->
     <input id="adults" type="number" placeholder="No. of Adults" class="w-full mb-3 p-2 border rounded">
     <input id="children" type="number" placeholder="No. of Children" class="w-full mb-3 p-2 border rounded">
 
@@ -109,7 +117,9 @@ function sendToWhatsApp() {
   let phone = document.getElementById("phone").value;
   let pickup = document.getElementById("pickup").value;
   let drop = document.getElementById("drop").value;
+  let tripType = document.getElementById("tripType").value;
   let date = document.getElementById("date").value;
+  let returnDate = document.getElementById("returnDate").value;
   let adults = document.getElementById("adults").value;
   let children = document.getElementById("children").value;
   let vehicle = document.getElementById("vehicle").value;
@@ -121,9 +131,12 @@ Name: ${name}
 Phone: ${phone}
 Pickup: ${pickup}
 Drop: ${drop}
-Date: ${date}
 
-Travellers:
+Trip Type: ${tripType}
+Travel Date: ${date}
+Return Date: ${returnDate}
+
+Passengers:
 Adults: ${adults}
 Children: ${children}
 
